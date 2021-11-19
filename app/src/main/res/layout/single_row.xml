@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ClientsRV">
+
+    <TextView
+        android:id="@+id/RowName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10.5dp"
+        android:layout_marginTop="6.5dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/Name"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/RowLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/RowName"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="#000000"
+        android:layout_marginTop="6.5dp"
+        android:text="@string/LastName"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/RowStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RowName"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/roboto"
+        android:layout_toEndOf="@+id/RowPostalCode"
+        android:text="@string/Street"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/coma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/coma"
+        android:fontFamily="@font/roboto"
+        android:layout_below="@+id/RowName"
+        android:layout_toEndOf="@+id/RowStreet"/>
+
+    <TextView
+        android:id="@+id/RowPostalCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RowName"
+        android:layout_marginStart="10.5dp"
+        android:text="@string/PostalCode"
+        android:fontFamily="@font/roboto"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/RowCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/City"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/roboto"
+        android:layout_below="@+id/RowName"
+        android:layout_toEndOf="@+id/coma"/>
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/RowStreet"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="6.5dp"
+        android:elevation="2dp" />
+
+    <TextView
+        android:id="@+id/activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="center"
+        android:layout_above="@+id/divider9"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="5.5dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/Active"
+        android:textSize="10sp"
+        android:textColor="@color/secondary" />
+
+</RelativeLayout>

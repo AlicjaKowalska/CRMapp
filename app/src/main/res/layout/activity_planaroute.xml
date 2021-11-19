@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarPlanARoute"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
+        app:title="@string/PlanARoute"
+        app:titleTextColor="@color/white"/>
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/SearchClientForRoute"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#4D000000"
+        android:elevation="2dp" />
+
+    <SearchView
+        android:id="@+id/SearchClientForRoute"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/toolbarPlanARoute"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/search"
+        android:queryHint="@string/Search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ClientRoute"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/SearchClientForRoute"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5.5dp"
+        android:layout_marginEnd="5.5dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/PlanARouteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="#FFFFFF"
+        app:backgroundTint="?attr/colorPrimary"
+        android:src="@drawable/ic_baseline_navigation_24" />
+</RelativeLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="5dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarDetails"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/blue2"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
+        app:title="@string/ClientDetails"
+        app:titleTextColor="@color/white">
+
+            <ImageButton
+                android:id="@+id/ClientDetailsEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_icon_content_create_24px"
+                android:contentDescription="@string/EditClient" />
+
+            <ImageButton
+                android:id="@+id/ClientDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:contentDescription="@string/ClientDelete" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:id="@+id/ClientDetailsSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarDetails">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ClientImageCV"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="4dp"
+            android:elevation="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16.32dp">
+        <ImageView
+            android:id="@+id/ClientImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_client_image"
+            android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/Name"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@+id/ClientImageCV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ClientDetailsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Name"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/Name"
+            app:layout_constraintLeft_toRightOf="@+id/ClientImageCV"/>
+
+        <TextView
+            android:id="@+id/LastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/LastName"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/ClientImageCV"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsName" />
+
+        <TextView
+            android:id="@+id/ClientDetailsLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LastName"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/LastName"
+            app:layout_constraintLeft_toRightOf="@+id/ClientImageCV"/>
+
+
+        <TextView
+            android:id="@+id/ClientDetailsStreet"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="29.68dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingLeft="16.5dp"
+            android:paddingTop="17dp"
+            android:paddingBottom="18dp"
+            android:text="@string/Street"
+            android:background="@drawable/edit_text_shape_grey"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ClientImageCV" />
+
+        <TextView
+            android:id="@+id/Street"
+            android:layout_width="28dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="16.5dp"
+            android:layout_marginTop="20.68dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/Street"
+            android:background="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/ClientDetailsStreet"
+            app:layout_constraintTop_toBottomOf="@+id/ClientImageCV" />
+
+        <TextView
+            android:id="@+id/ClientDetailsBuilding"
+            android:layout_width="150dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/edit_text_shape_grey"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingStart="16dp"
+            android:paddingTop="17dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="18dp"
+            android:text="@string/Building"
+            android:textColor="@color/black"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsStreet" />
+
+        <TextView
+            android:id="@+id/Building"
+            android:layout_width="64dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="20.68dp"
+            android:layout_marginStart="16.5dp"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto"
+            android:text="@string/Building"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/ClientDetailsBuilding"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsStreet" />
+
+        <TextView
+            android:id="@+id/ClientDetailsPostalCode"
+            android:layout_width="150dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/edit_text_shape_grey"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingStart="16dp"
+            android:paddingTop="17dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="18dp"
+            android:text="@string/PostalCode"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ClientDetailsBuilding"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsStreet" />
+
+        <TextView
+            android:id="@+id/PostalCode"
+            android:layout_width="79dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="20.68dp"
+            android:layout_marginStart="16.5dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/PostalCode"
+            android:textSize="12sp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/ClientDetailsPostalCode"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsStreet" />
+
+        <TextView
+            android:id="@+id/ClientDetailsCity"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="29.68dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="18dp"
+            android:paddingStart="16.5dp"
+            android:paddingTop="17dp"
+            android:paddingBottom="18dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/City"
+            android:background="@drawable/edit_text_shape_grey"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsBuilding" />
+
+        <TextView
+            android:id="@+id/City"
+            android:layout_width="39dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="20.68dp"
+            android:layout_marginStart="16.5dp"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto"
+            android:text="@string/City"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/ClientDetailsCity"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsBuilding" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/weather"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="#3994FB"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsCity"
+            app:layout_constraintBottom_toTopOf="@+id/clientMapView">
+
+            <TextView
+                android:id="@+id/weatherDegrees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:text="23"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/divider2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:text="°"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/divider2"
+                app:layout_constraintHorizontal_bias="0.025"
+                app:layout_constraintStart_toEndOf="@+id/weatherDegrees"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.508" />
+
+            <TextView
+                android:id="@+id/weatherCity"
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/City"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#4DFFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weatherDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Opis pogody"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintStart_toEndOf="@+id/divider2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_wb_sunny_24" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/clientMapView"
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weather"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Switch
+            android:id="@+id/switchActivity"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/ClientImageCV"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsLastName"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/clientActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/Active"
+            android:textColor="@color/secondary"
+            app:layout_constraintLeft_toRightOf="@+id/switchActivity"
+            app:layout_constraintTop_toBottomOf="@+id/ClientDetailsLastName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

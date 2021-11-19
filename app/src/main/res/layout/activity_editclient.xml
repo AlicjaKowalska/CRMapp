@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarEdit"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
+        app:title="@string/EditClient"
+        app:titleTextColor="@color/white"
+        tools:layout_editor_absoluteX="0dp">
+
+        <ImageButton
+            android:id="@+id/ClientEditButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#00000000"
+            android:src="@drawable/ic_icon_action_check_circle_24px" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarEdit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ClientImagePlaceHolderCV"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16.32dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="4dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ClientImagePlaceHolder"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_client_image" />
+
+                <ImageView
+                    android:id="@+id/deleteImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    app:layout_constraintStart_toStartOf="@+id/ClientImagePlaceHolderCV"
+                    app:layout_constraintTop_toTopOf="@+id/ClientImagePlaceHolderCV"
+                    app:srcCompat="@drawable/ic_delete" />
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/ClientName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="176dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="18dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_shape_grey"
+                android:fontFamily="@font/roboto"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingTop="17dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="18dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toEndOf="@+id/ClientImagePlaceHolderCV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="24dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16.5dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:text="@string/Name"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/ClientName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ClientName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/ClientLastName"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="176dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="18dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_shape_grey"
+                android:fontFamily="@font/roboto"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingTop="17dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="18dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toEndOf="@+id/ClientImagePlaceHolderCV"
+                app:layout_constraintTop_toBottomOf="@+id/ClientName" />
+
+            <TextView
+                android:id="@+id/LastName"
+                android:layout_width="55dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:text="@string/LastName"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/ClientLastName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ClientLastName"
+                app:layout_constraintTop_toBottomOf="@id/ClientName" />
+
+            <EditText
+                android:id="@+id/ClientStreet"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="18dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_shape_grey"
+                android:fontFamily="@font/roboto"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingTop="17dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="18dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ClientImagePlaceHolderCV" />
+
+            <TextView
+                android:id="@+id/Street"
+                android:layout_width="28dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:text="@string/Street"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/ClientStreet"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ClientStreet"
+                app:layout_constraintTop_toBottomOf="@id/ClientImagePlaceHolderCV" />
+
+            <EditText
+                android:id="@+id/ClientBuilding"
+                android:layout_width="150dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="29dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_shape_grey"
+                android:fontFamily="@font/roboto"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingTop="17dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="18dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ClientStreet" />
+
+            <TextView
+                android:id="@+id/Building"
+                android:layout_width="64dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16.5dp"
+                android:layout_marginTop="20.68dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:text="@string/Building"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/ClientBuilding"
+                app:layout_constraintTop_toBottomOf="@id/ClientStreet" />
+
+            <EditText
+                android:id="@+id/ClientPostalCode"
+                android:layout_width="150dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="18dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_shape_grey"
+                android:fontFamily="@font/roboto"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingTop="17dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="18dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toEndOf="@+id/ClientBuilding"
+                app:layout_constraintTop_toBottomOf="@+id/ClientStreet" />
+
+            <TextView
+                android:id="@+id/PostalCode"
+                android:layout_width="79dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16.5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:text="@string/PostalCode"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/ClientPostalCode"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ClientPostalCode"
+                app:layout_constraintTop_toBottomOf="@id/ClientStreet" />
+
+            <EditText
+                android:id="@+id/ClientCity"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_shape_grey"
+                android:fontFamily="@font/roboto"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingTop="17dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="18dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ClientBuilding"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/City"
+                android:layout_width="39dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="16.5dp"
+                android:layout_marginTop="20.68dp"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto"
+                android:text="@string/City"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/ClientCity"
+                app:layout_constraintTop_toBottomOf="@id/ClientBuilding" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

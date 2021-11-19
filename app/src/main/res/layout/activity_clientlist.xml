@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarList"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/blue2"
+        android:elevation="4dp"
+        app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
+        app:title="@string/ClientsList"
+        app:titleTextColor="@color/white">
+
+        <ImageView
+            android:id="@+id/mapAllClients"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="14dp"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_icon_maps_place_24px__1_"
+            android:text="@string/PlanARoute" />
+
+        <ImageView
+            android:id="@+id/planARouteButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_assistant_direction_24"
+            android:layout_gravity="right"
+            android:layout_marginEnd="14dp"/>
+
+        <ImageView
+            android:id="@+id/ListAddButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="14dp"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_person_add"
+            android:text="@string/PlanARoute" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <SearchView
+        android:id="@+id/SearchClient"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/toolbarList"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/search"
+        android:queryHint="@string/Search"/>
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/SearchClient"
+        android:background="#4D000000"
+        android:layout_centerHorizontal="true"
+        android:elevation="2dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ClientList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/SearchClient"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5.5dp"
+        android:layout_marginEnd="5.5dp"/>
+
+</RelativeLayout>

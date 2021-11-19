@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">CRMapp</string>
+
+    <string name="EditClient">Edytuj klienta</string>
+    <string name="Edit">Edytuj</string>
+    <string name="Name">Imię</string>
+    <string name="LastName">Nazwisko</string>
+    <string name="Age">Wiek</string>
+    <string name="Address">Adres</string>
+    <string name="City">Miasto</string>
+    <string name="PostalCode">Kod pocztowy</string>
+    <string name="GeoLat">Szer. geograficzna</string>
+    <string name="GeoLon">Dł. geograficzna</string>
+    <string name="AddClient">Dodaj klienta</string>
+    <string name="Zatwierdź">Zatwierdź</string>
+    <string name="ClientsList">Lista klientów</string>
+    <string name="ClientDelete">Usuń</string>
+    <string name="ClientDetails">Szczegóły klienta</string>
+    <string name="coma">,</string>
+    <string name="mapAllClients">Mapa</string>
+    <string name="Navigation">Nawiguj</string>
+    <string name="PlanARoute">Zaplanuj trasę</string>
+    <string name="ClientBase">BAZA KLIENTÓW</string>
+    <string name="Loading">Loading...</string>
+    <string name="Street">Ulica</string>
+    <string name="Building">Nr budynku</string>
+    <string name="Active">AKTYWNY</string>
+    <string name="Route">TRASA</string>
+    <string name="Search">Szukaj</string>
+</resources>
