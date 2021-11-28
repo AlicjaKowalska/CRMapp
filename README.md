@@ -21,7 +21,7 @@
 
 • determining the route to customers
 
-<img src="https://i.imgur.com/vvSAByw.png" width=25% height=25%>  <img src="https://i.imgur.com/ZJVQMyV.png" width=25% height=25%>  <img src="" width=25% height=25%>
+<img src="https://i.imgur.com/vvSAByw.png" width=25% height=25%>  <img src="https://i.imgur.com/ZJVQMyV.png" width=25% height=25%>  
 
 • determining the optimal route to customers 
 
